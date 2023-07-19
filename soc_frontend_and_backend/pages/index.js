@@ -1,16 +1,54 @@
-// import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
+import React from "react";
 
-const inter = Inter({ subsets: ['latin'] })
+//INTERNAL IMPORT
+import Style from "../styles/index.module.css";
+import {
+  HeroSection,
+  Service,
+  BigNFTSilder,
+  Subscribe,
+  Title,
+  Category,
+  Filter,
+  NFTCard,
+  Collection,
+  AudioLive,
+  FollowerTab,
+  Slider,
+  Brand,
+  Video,
+} from "../components/componentsindex";
 
-export default function Home() {
+const Home = () => {
   return (
-    <>
-      <Header />
-      This is the <b>Home Page</b>
-      <Footer />
-    </>
-  )
-}
+    <div className={Style.homePage}>
+      <HeroSection />
+      <Service />
+      <BigNFTSilder />
+      <Title
+        heading="Audio Collection"
+        paragraph="Discover the most outstanding NFTs in all topics of life."
+      />
+      <AudioLive />
+      <FollowerTab />
+      <Slider />
+      <Collection />
+      <Title
+        heading="Featured NFTs"
+        paragraph="Discover the most outstanding NFTs in all topics of life."
+      />
+      <Filter />
+      <NFTCard />
+      <Title
+        heading="Browse by category"
+        paragraph="Explore the NFTs in the most featured categories."
+      />
+      <Category />
+      <Subscribe />
+      <Brand />
+      <Video />
+    </div>
+  );
+};
+
+export default Home;
