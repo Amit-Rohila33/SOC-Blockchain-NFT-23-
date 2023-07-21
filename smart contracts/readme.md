@@ -1,1 +1,1 @@
-# Smart contracts using solidity and etherneum
+# Smart contracts using solidity and ethereum
